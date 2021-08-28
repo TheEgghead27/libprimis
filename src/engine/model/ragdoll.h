@@ -31,7 +31,7 @@ class ragdollskel
             vec pos;
             float radius, weight;
         };
-        vector<vert> verts;
+        std::vector<vert> verts;
 
         struct joint
         {
@@ -39,7 +39,7 @@ class ragdollskel
             float weight;
             matrix4x3 orient;
         };
-        vector<joint> joints;
+        std::vector<joint> joints;
 
         struct rotlimit
         {
@@ -61,7 +61,7 @@ class ragdollskel
             int vert[2];
             float mindist, maxdist;
         };
-        vector<distlimit> distlimits;
+        std::vector<distlimit> distlimits;
 
         int eye;
 
@@ -100,10 +100,10 @@ class ragdolldata
               collidemillis(0),
               lastmove(lastmillis),
               radius(0),
-              tris(new matrix3[skel->tris.length()]),
-              animjoints(!skel->animjoints || skel->joints.empty() ? NULL : new matrix4x3[skel->joints.length()]),
-              reljoints(skel->reljoints.empty() ? NULL : new dualquat[skel->reljoints.length()]),
-              verts(new vert[skel->verts.length()]),
+              tris(new matrix3[skel->tris.size()]),
+              animjoints(!skel->animjoints || skel->joints.empty() ? NULL : new matrix4x3[skel->joints.size()]),
+              reljoints(skel->reljoints.empty() ? NULL : new dualquat[skel->reljoints.size()]),
+              verts(new vert[skel->verts.size()]),
               collisions(0),
               floating(0),
               unsticks(INT_MAX),

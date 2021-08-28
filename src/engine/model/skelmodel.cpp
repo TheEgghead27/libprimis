@@ -28,7 +28,7 @@
 
 VARP(gpuskel, 0, 1, 1); //toggles gpu acceleration of skeletal models
 
-VAR(maxskelanimdata, 1, 192, 0);
+VAR(maxskelanimdata, 1, 192, 0); //sets maximum number of gpu bones
 
 hashnameset<skelmodel::skeleton *> skelmodel::skeletons;
 
@@ -235,7 +235,7 @@ void skelmodel::skeleton::remapbones()
     }
     if(ragdoll)
     {
-        for(int i = 0; i < ragdoll->joints.length(); i++)
+        for(uint i = 0; i < ragdoll->joints.size(); i++)
         {
             boneinfo &info = bones[ragdoll->joints[i].bone];
             if(info.interpindex < 0)
@@ -650,7 +650,7 @@ void skelmodel::skeleton::interpbones(const AnimState *as, float pitch, const ve
 void skelmodel::skeleton::initragdoll(ragdolldata &d, skelcacheentry &sc, part *p)
 {
     const dualquat *bdata = sc.bdata;
-    for(int i = 0; i < ragdoll->joints.length(); i++)
+    for(uint i = 0; i < ragdoll->joints.size(); i++)
     {
         const ragdollskel::joint &j = ragdoll->joints[i];
         const boneinfo &b = bones[j.bone];
@@ -667,7 +667,7 @@ void skelmodel::skeleton::initragdoll(ragdolldata &d, skelcacheentry &sc, part *
     }
     if(ragdoll->animjoints)
     {
-        for(int i = 0; i < ragdoll->joints.length(); i++)
+        for(uint i = 0; i < ragdoll->joints.size(); i++)
         {
             const ragdollskel::joint &j = ragdoll->joints[i];
             const boneinfo &b = bones[j.bone];
@@ -675,7 +675,7 @@ void skelmodel::skeleton::initragdoll(ragdolldata &d, skelcacheentry &sc, part *
             d.calcanimjoint(i, matrix4x3(q));
         }
     }
-    for(int i = 0; i < ragdoll->verts.length(); i++)
+    for(uint i = 0; i < ragdoll->verts.size(); i++)
     {
         ragdolldata::vert &dv = d.verts[i];
         matrixstack[matrixpos].transform(vec(dv.pos).mul(p->model->scale), dv.pos);
@@ -697,7 +697,7 @@ void skelmodel::skeleton::genragdollbones(ragdolldata &d, skelcacheentry &sc, pa
     }
     sc.nextversion();
     vec trans = vec(d.center).div(p->model->scale).add(p->model->translate);
-    for(int i = 0; i < ragdoll->joints.length(); i++)
+    for(uint i = 0; i < ragdoll->joints.size(); i++)
     {
         const ragdollskel::joint &j = ragdoll->joints[i];
         const boneinfo &b = bones[j.bone];

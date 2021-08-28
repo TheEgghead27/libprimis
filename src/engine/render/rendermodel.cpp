@@ -302,9 +302,10 @@ COMMAND(mdlname, "");
 void rdvert(float *x, float *y, float *z, float *radius)
 {
     CHECK_RAGDOLL;
-    ragdollskel::vert &v = ragdoll->verts.add();
+    ragdollskel::vert v;
     v.pos = vec(*x, *y, *z);
     v.radius = *radius > 0 ? *radius : 1;
+    ragdoll->verts.push_back(v);
 }
 COMMAND(rdvert, "ffff");
 
@@ -336,23 +337,25 @@ void rdjoint(int *n, int *t, int *v1, int *v2, int *v3)
     {
         return;
     }
-    ragdollskel::joint &j = ragdoll->joints.add();
+    ragdollskel::joint j;
     j.bone = *n;
     j.tri = *t;
     j.vert[0] = *v1;
     j.vert[1] = *v2;
     j.vert[2] = *v3;
+    ragdoll->joints.push_back(j);
 }
 COMMAND(rdjoint, "iibbb");
 
 void rdlimitdist(int *v1, int *v2, float *mindist, float *maxdist)
 {
     CHECK_RAGDOLL;
-    ragdollskel::distlimit &d = ragdoll->distlimits.add();
+    ragdollskel::distlimit d;
     d.vert[0] = *v1;
     d.vert[1] = *v2;
     d.mindist = *mindist;
     d.maxdist = std::max(*maxdist, *mindist);
+    ragdoll->distlimits.push_back(d);
 }
 COMMAND(rdlimitdist, "iiff");
 
@@ -672,13 +675,13 @@ struct modelbatch
     model *m;
     int flags, batched;
 };
-static vector<batchedmodel> batchedmodels;
+static std::vector<batchedmodel> batchedmodels;
 static vector<modelbatch> batches;
 static vector<modelattach> modelattached;
 
 void resetmodelbatches()
 {
-    batchedmodels.setsize(0);
+    batchedmodels.clear();
     batches.setsize(0);
     modelattached.setsize(0);
 }
@@ -815,7 +818,7 @@ static int shadowmaskmodel(const vec &center, float radius)
 
 void shadowmaskbatchedmodels(bool dynshadow)
 {
-    for(int i = 0; i < batchedmodels.length(); i++)
+    for(uint i = 0; i < batchedmodels.size(); i++)
     {
         batchedmodel &b = batchedmodels[i];
         if(b.flags&(Model_Mapmodel | Model_NoShadow)) //mapmodels are not dynamic models by definition
@@ -829,7 +832,7 @@ void shadowmaskbatchedmodels(bool dynshadow)
 int batcheddynamicmodels()
 {
     int visible = 0;
-    for(int i = 0; i < batchedmodels.length(); i++)
+    for(uint i = 0; i < batchedmodels.size(); i++)
     {
         batchedmodel &b = batchedmodels[i];
         if(b.flags&Model_Mapmodel) //mapmodels are not dynamic models by definition
@@ -858,7 +861,7 @@ int batcheddynamicmodels()
 int batcheddynamicmodelbounds(int mask, vec &bbmin, vec &bbmax)
 {
     int vis = 0;
-    for(int i = 0; i < batchedmodels.length(); i++)
+    for(uint i = 0; i < batchedmodels.size(); i++)
     {
         batchedmodel &b = batchedmodels[i];
         if(b.flags&Model_Mapmodel) //mapmodels are not dynamic models by definition
@@ -1102,13 +1105,13 @@ void startmodelquery(occludequery *query)
 {
     modelquery = query;
     modelquerybatches = batches.length();
-    modelquerymodels = batchedmodels.length();
+    modelquerymodels = batchedmodels.size();
     modelqueryattached = modelattached.length();
 }
 
 void endmodelquery()
 {
-    if(batchedmodels.length() == modelquerymodels)
+    if(batchedmodels.size() == static_cast<uint>(modelquerymodels))
     {
         modelquery->fragments = 0;
         modelquery = nullptr;
@@ -1138,7 +1141,7 @@ void endmodelquery()
     endquery();
     modelquery = nullptr;
     batches.setsize(modelquerybatches);
-    batchedmodels.setsize(modelquerymodels);
+    batchedmodels.resize(modelquerymodels);
     modelattached.setsize(modelqueryattached);
     disableaamask();
 }
@@ -1150,7 +1153,7 @@ void clearbatchedmapmodels()
         modelbatch &b = batches[i];
         if(b.flags&Model_Mapmodel)
         {
-            batchedmodels.setsize(b.batched);
+            batchedmodels.resize(b.batched);
             batches.setsize(i);
             break;
         }
@@ -1203,7 +1206,7 @@ void rendermapmodel(int idx, int anim, const vec &o, float yaw, float pitch, flo
         return;
     }
 
-    batchedmodel &b = batchedmodels.add();
+    batchedmodel b;
     b.pos = o;
     b.center = center;
     b.radius = radius;
@@ -1219,7 +1222,8 @@ void rendermapmodel(int idx, int anim, const vec &o, float yaw, float pitch, flo
     b.visible = visible;
     b.d = nullptr;
     b.attached = -1;
-    addbatchedmodel(m, b, batchedmodels.length()-1);
+    addbatchedmodel(m, b, batchedmodels.size()-1);
+    batchedmodels.push_back(b);
 }
 
 void rendermodel(const char *mdl, int anim, const vec &o, float yaw, float pitch, float roll, int flags, dynent *d, modelattach *a, int basetime, int basetime2, float size, const vec4 &color)
@@ -1326,7 +1330,7 @@ hasboundbox:
         return;
     }
 
-    batchedmodel &b = batchedmodels.add();
+    batchedmodel b;
     b.pos = o;
     b.center = center;
     b.radius = radius;
@@ -1342,6 +1346,7 @@ hasboundbox:
     b.visible = 0;
     b.d = d;
     b.attached = a ? modelattached.length() : -1;
+    batchedmodels.push_back(b);
     if(a)
     {
         for(int i = 0;; i++)
@@ -1353,7 +1358,7 @@ hasboundbox:
             }
         }
     }
-    addbatchedmodel(m, b, batchedmodels.length()-1);
+    addbatchedmodel(m, b, batchedmodels.size()-1);
 }
 
 int intersectmodel(const char *mdl, int anim, const vec &pos, float yaw, float pitch, float roll, const vec &o, const vec &ray, float &dist, int mode, dynent *d, modelattach *a, int basetime, int basetime2, float size)
