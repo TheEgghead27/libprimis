@@ -100,9 +100,9 @@ class ragdolldata
               collidemillis(0),
               lastmove(lastmillis),
               radius(0),
-              tris(new matrix3[skel->tris.size()]),
+              tris(new matrix3[skel->tris.length()]),
               animjoints(!skel->animjoints || skel->joints.empty() ? NULL : new matrix4x3[skel->joints.length()]),
-              reljoints(skel->reljoints.empty() ? NULL : new dualquat[skel->reljoints.size()]),
+              reljoints(skel->reljoints.empty() ? NULL : new dualquat[skel->reljoints.length()]),
               verts(new vert[skel->verts.length()]),
               collisions(0),
               floating(0),
@@ -138,7 +138,7 @@ class ragdolldata
         void calcboundsphere();
         void constrain();
         void constraindist();
-        void applyrotlimit(ragdollskel::tri *t1, ragdollskel::tri *t2, float angle, const vec &axis);
+        void applyrotlimit(ragdollskel::tri &t1, ragdollskel::tri &t2, float angle, const vec &axis);
         void constrainrot();
         void calcrotfriction();
         void applyrotfriction(float ts);
