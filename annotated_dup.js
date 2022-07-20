@@ -5,14 +5,13 @@ var annotated_dup =
     [ "block3", "structblock3.html", null ],
     [ "bvec", "structbvec.html", null ],
     [ "cube", "classcube.html", "classcube" ],
-    [ "cubeworld", "structcubeworld.html", "structcubeworld" ],
+    [ "cubeworld", "classcubeworld.html", "classcubeworld" ],
     [ "databuf", "structdatabuf.html", "structdatabuf" ],
     [ "DecalSlot", "structDecalSlot.html", null ],
     [ "dynent", "structdynent.html", "structdynent" ],
     [ "editinfo", "structeditinfo.html", null ],
     [ "entity", "structentity.html", "structentity" ],
     [ "extentity", "structextentity.html", null ],
-    [ "facebounds", "structfacebounds.html", null ],
     [ "GenericVec2", "structGenericVec2.html", null ],
     [ "GenericVec3", "structGenericVec3.html", null ],
     [ "hashbase", "structhashbase.html", "structhashbase" ],
@@ -47,6 +46,5 @@ var annotated_dup =
     [ "vec4", "structvec4.html", "structvec4" ],
     [ "vector", "structvector.html", "structvector" ],
     [ "VSlot", "structVSlot.html", null ],
-    [ "vslotmap", "structvslotmap.html", null ],
-    [ "vslotref", "structvslotref.html", null ]
+    [ "vslotmap", "structvslotmap.html", null ]
 ];

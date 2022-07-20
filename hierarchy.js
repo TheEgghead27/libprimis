@@ -7,13 +7,12 @@ var hierarchy =
     [ "hashbase< H, E, K, T >::chain", "structhashbase_1_1chain.html", null ],
     [ "hashbase< H, E, K, T >::chainchunk", "structhashbase_1_1chainchunk.html", null ],
     [ "cube", "classcube.html", null ],
-    [ "cubeworld", "structcubeworld.html", null ],
+    [ "cubeworld", "classcubeworld.html", null ],
     [ "databuf< T >", "structdatabuf.html", null ],
     [ "editinfo", "structeditinfo.html", null ],
     [ "entity", "structentity.html", [
       [ "extentity", "structextentity.html", null ]
     ] ],
-    [ "facebounds", "structfacebounds.html", null ],
     [ "GenericVec2< T >", "structGenericVec2.html", null ],
     [ "GenericVec3< T >", "structGenericVec3.html", null ],
     [ "hashbase< H, E, K, T >", "structhashbase.html", null ],
@@ -69,6 +68,5 @@ var hierarchy =
     [ "VSlot", "structVSlot.html", [
       [ "DecalSlot", "structDecalSlot.html", null ]
     ] ],
-    [ "vslotmap", "structvslotmap.html", null ],
-    [ "vslotref", "structvslotref.html", null ]
+    [ "vslotmap", "structvslotmap.html", null ]
 ];
