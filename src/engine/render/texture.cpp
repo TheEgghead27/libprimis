@@ -1083,6 +1083,7 @@ SDL_Surface *loadsurface(const char *name)
         SDL_RWops *rw = z->rwops();
         if(rw)
         {
+		conoutf("pog");
             const char *ext = std::strrchr(name, '.');
             if(ext)
             {
@@ -1095,7 +1096,10 @@ SDL_Surface *loadsurface(const char *name)
     }
     if(!s)
     {
+	    // conoutf(Console_Error, "unpog need to find %s", findfile(name, "rb"));
         s = IMG_Load(findfile(name, "rb"));
+	if (!s)
+		conoutf(Console_Error, "we did not get %s error %s", findfile(name, "rb"), SDL_GetError());
     }
     return fixsurfaceformat(s);
 }
