@@ -14,11 +14,6 @@ var annotated_dup =
     [ "extentity", "structextentity.html", null ],
     [ "GenericVec2", "structGenericVec2.html", null ],
     [ "GenericVec3", "structGenericVec3.html", null ],
-    [ "hashbase", "structhashbase.html", "structhashbase" ],
-    [ "hashnameset", "structhashnameset.html", null ],
-    [ "hashset", "structhashset.html", null ],
-    [ "hashtable", "structhashtable.html", null ],
-    [ "hashtableentry", "structhashtableentry.html", null ],
     [ "ident", "structident.html", "structident" ],
     [ "identstack", "structidentstack.html", null ],
     [ "identval", "structidentval.html", null ],
@@ -32,10 +27,7 @@ var annotated_dup =
     [ "selinfo", "structselinfo.html", "structselinfo" ],
     [ "Slot", "structSlot.html", "structSlot" ],
     [ "SlotShaderParam", "structSlotShaderParam.html", null ],
-    [ "sortless", "structsortless.html", null ],
-    [ "sortnameless", "structsortnameless.html", null ],
     [ "stream", "structstream.html", null ],
-    [ "stringslice", "structstringslice.html", null ],
     [ "svec", "structsvec.html", null ],
     [ "tagval", "structtagval.html", null ],
     [ "undoblock", "structundoblock.html", "structundoblock" ],
@@ -44,7 +36,5 @@ var annotated_dup =
     [ "vec", "structvec.html", "structvec" ],
     [ "vec2", "structvec2.html", null ],
     [ "vec4", "structvec4.html", "structvec4" ],
-    [ "vector", "structvector.html", "structvector" ],
-    [ "VSlot", "structVSlot.html", null ],
-    [ "vslotmap", "structvslotmap.html", null ]
+    [ "VSlot", "structVSlot.html", null ]
 ];
