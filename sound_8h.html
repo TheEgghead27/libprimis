@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" sizes=180x180 type="image/png" href="apple-touch-icon-180x180.png"/>
 <link rel="manifest" href="site.webmanifest"/>
 <!-- The previous icons and webmanifest were manually added. The rest is auto-genrated. -->
-<title>Libprimis: Member List</title>
+<title>Libprimis: /github/workspace/src/libprimis-headers/sound.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,7 +86,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('structundolist.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('sound_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -112,24 +112,46 @@ $(document).ready(function(){initNavTree('structundolist.html',''); initResizabl
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">undolist Member List</div></div>
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
+  <div class="headertitle"><div class="title">sound.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="structundolist.html">undolist</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>add</b>(undoblock *u) (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>empty</b>() (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>first</b> (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>last</b> (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>popfirst</b>() (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>poplast</b>() (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>undolist</b>() (defined in <a class="el" href="structundolist.html">undolist</a>)</td><td class="entry"><a class="el" href="structundolist.html">undolist</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-</table></div><!-- contents -->
+<p>The sound engine that translates world positions into positonal sound.  
+<a href="#details">More...</a></p>
+
+<p><a href="sound_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoundEngine.html">SoundEngine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The wrapper around SDL_Mixer that plays sounds ingame.  <a href="classSoundEngine.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3dea15311dcc52d96d1b067ee6d2d4cf"><td class="memItemLeft" align="right" valign="top"><a id="a3dea15311dcc52d96d1b067ee6d2d4cf" name="a3dea15311dcc52d96d1b067ee6d2d4cf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUDIODRIVER</b>&#160;&#160;&#160;&quot;pulseaudio alsa arts esd jack pipewire dsp&quot;</td></tr>
+<tr class="separator:a3dea15311dcc52d96d1b067ee6d2d4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1d58ae8fa29e1c03df23baeffb32b14c"><td class="memItemLeft" align="right" valign="top"><a id="a1d58ae8fa29e1c03df23baeffb32b14c" name="a1d58ae8fa29e1c03df23baeffb32b14c"></a>
+typedef struct _Mix_Music&#160;</td><td class="memItemRight" valign="bottom"><b>Mix_Music</b></td></tr>
+<tr class="separator:a1d58ae8fa29e1c03df23baeffb32b14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The sound engine that translates world positions into positonal sound. </p>
+<p>This file describes an object, called <a class="el" href="classSoundEngine.html" title="The wrapper around SDL_Mixer that plays sounds ingame.">SoundEngine</a>, that translates sounds from a world position to a positional audio sound that can be played by SDL2-mixer. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_10e7c0f1162619d79ac1e2722ec6e40f.html">libprimis-headers</a></li><li class="navelem"><a class="el" href="sound_8h.html">sound.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
