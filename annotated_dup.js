@@ -1,5 +1,13 @@
 var annotated_dup =
 [
+    [ "prop", null, [
+      [ "Property", "classprop_1_1Property.html", "classprop_1_1Property" ],
+      [ "PropertyMeta", "classprop_1_1PropertyMeta.html", "classprop_1_1PropertyMeta" ]
+    ] ],
+    [ "std", null, [
+      [ "hash< ivec >", "structstd_1_1hash_3_01ivec_01_4.html", null ],
+      [ "hash< vec >", "structstd_1_1hash_3_01vec_01_4.html", null ]
+    ] ],
     [ "animinfo", "structaniminfo.html", null ],
     [ "animinterpinfo", "structaniminterpinfo.html", null ],
     [ "block3", "structblock3.html", null ],
@@ -20,8 +28,8 @@ var annotated_dup =
     [ "ivec", "structivec.html", null ],
     [ "ivec2", "structivec2.html", null ],
     [ "matrix3", "classmatrix3.html", "classmatrix3" ],
-    [ "matrix4", "structmatrix4.html", null ],
-    [ "matrix4x3", "structmatrix4x3.html", null ],
+    [ "matrix4", "structmatrix4.html", "structmatrix4" ],
+    [ "matrix4x3", "structmatrix4x3.html", "structmatrix4x3" ],
     [ "modelattach", "structmodelattach.html", null ],
     [ "physent", "structphysent.html", "structphysent" ],
     [ "selinfo", "structselinfo.html", "structselinfo" ],

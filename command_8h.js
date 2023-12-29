@@ -7,8 +7,9 @@ var command_8h =
     [ "ident::identvalptr", "unionident_1_1identvalptr.html", "unionident_1_1identvalptr" ],
     [ "addcommand", "command_8h.html#a843cea4bbdaf36111b913f0fb86a5662", null ],
     [ "checksleep", "command_8h.html#ad97d745d2a01ec6f7b780d792e082e08", null ],
-    [ "clampvar", "command_8h.html#a8e8bc55a9398bb67e53e15a0cde66e08", null ],
+    [ "clampvar", "command_8h.html#a92cfd66c07410bc99e2fc420f3faf762", null ],
     [ "clear_command", "command_8h.html#ab00d3f04f513b9d9534c8975d8972526", null ],
+    [ "escapeid", "command_8h.html#a2d27849ec8b6bbeebbd7570ff1e2610c", null ],
     [ "escapestring", "command_8h.html#a20b5ef16ec5ad90369a8fd98a0178fa2", null ],
     [ "execfile", "command_8h.html#a6e5803cc209ddd0bfcbbb57c0480f974", null ],
     [ "execident", "command_8h.html#a93c2484e04b478cd5ac6cdef26a8edf1", null ],
@@ -19,7 +20,7 @@ var command_8h =
     [ "initidents", "command_8h.html#a7f0e73b474d1509b303b501465b025ef", null ],
     [ "intret", "command_8h.html#a21cd226150059e3a302cfdbb389541c5", null ],
     [ "parseint", "command_8h.html#a79bba01336acd4dc1bdf874c2593e224", null ],
-    [ "printvar", "command_8h.html#a7a0296e4a02d14e3f16f069b69c1106f", null ],
+    [ "printvar", "command_8h.html#aa1d3f4343c8c8fc95fbd47d322108b2a", null ],
     [ "result", "command_8h.html#a0ce0f65be2f8547eba24228363753ba7", null ],
     [ "setfvar", "command_8h.html#a61f8df897a1c2017b241a9ad595ef042", null ],
     [ "setsvar", "command_8h.html#a63fd92ba10830b3f0d68bdb43c312441", null ],
@@ -27,6 +28,7 @@ var command_8h =
     [ "stringret", "command_8h.html#a080ad9f3a643e2a155813f3cbdc2d48c", null ],
     [ "svariable", "command_8h.html#ab29b0234f89f7f46fbaea112b66dc0bb", null ],
     [ "variable", "command_8h.html#a2537cb8648f7eddfcf49ebc1073e9cbc", null ],
+    [ "writecfg", "command_8h.html#aa1fd1eebd1801363552d1a6f17e6badc", null ],
     [ "identflags", "command_8h.html#abf183f2dd9db02ed8e5199922459cbaa", null ],
     [ "triggerqueue", "command_8h.html#ae653e8a430e6baa97073fbaa061abfb2", null ]
 ];

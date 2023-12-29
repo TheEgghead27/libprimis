@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['lastmillis_0',['lastmillis',['../iengine_8h.html#a3b17002f5a91db2f743a89c989ff47bf',1,'iengine.h']]],
-  ['lasttex_1',['lasttex',['../iengine_8h.html#a685fd412ceb35673e93244387c316091',1,'iengine.h']]],
-  ['length_2',['length',['../structdatabuf.html#a49524245867f8f8b7a7e8d5a6c2e9afa',1,'databuf']]],
-  ['libprimis_3',['Libprimis',['../index.html',1,'']]],
-  ['limitfps_4',['limitfps',['../iengine_8h.html#a1738c13bae99737597bd32a9fde99c1e',1,'iengine.h']]],
-  ['loadmapmodel_5',['loadmapmodel',['../iengine_8h.html#a1a33e5c5936f0eab1b900b90a1390169',1,'iengine.h']]],
-  ['loadmodel_6',['loadmodel',['../iengine_8h.html#a2c5775aeb943694e2cafef9dc2b4b20e',1,'iengine.h']]],
-  ['loadshaders_7',['loadshaders',['../iengine_8h.html#a409b21e3122d1ff9e237011d69d55c54',1,'iengine.h']]],
-  ['loadthumbnail_8',['loadthumbnail',['../structSlot.html#a1c03515604972228df2b940a04ff1309',1,'Slot']]],
-  ['logfile_9',['logfile',['../iengine_8h.html#ab25a3625a8efbaa3d81ef27bbb51c9c5',1,'iengine.h']]],
-  ['logoutf_10',['logoutf',['../iengine_8h.html#a9ab71763e51e4ec1e66eec6015d6e76f',1,'iengine.h']]],
-  ['lookupmaterial_11',['lookupmaterial',['../classcubeworld.html#a6818f64cfc8a9cff6b26e46bf948e2d4',1,'cubeworld']]]
+  ['_3a_20coarse_20texture_20rotations_20transforms_0',['`texrotate &lt;index&gt;` `vrotate &lt;index&gt;`: coarse texture rotations/transforms',['../md_engine.html#autotoc_md72',1,'']]],
+  ['_3a_20fine_20texture_20rotation_1',['`texangle &lt;index&gt;`, `vangle &lt;index&gt;` : fine texture rotation',['../md_engine.html#autotoc_md68',1,'']]],
+  ['_3a_20refract_2',['`texrefract &lt;scale&gt; &lt;R&gt; &lt;G&gt; &lt;B&gt;`, `vrefract &lt;scale&gt; &lt;R&gt; &lt;G&gt; &lt;B&gt;`: refract',['../md_engine.html#autotoc_md71',1,'']]],
+  ['_3a_20texture_20scaling_3',['`texscale &lt;scale&gt;`, `vscale &lt;scale&gt;`: texture scaling',['../md_engine.html#autotoc_md73',1,'']]],
+  ['_3a_20texture_20tinting_4',['`texcolor &lt;R&gt; &lt;G&gt; &lt;B&gt;`, `vcolor &lt;R&gt; &lt;G&gt; &lt;B&gt;`: texture tinting',['../md_engine.html#autotoc_md69',1,'']]],
+  ['_3a_20time_20varying_20translational_20offset_5',['`texscroll &lt;x&gt; &lt;y&gt;`, `vscroll &lt;x&gt; &lt;y&gt;`: time-varying translational offset',['../md_engine.html#autotoc_md74',1,'']]],
+  ['_3a_20translational_20texture_20offset_6',['`texoffset &lt;x&gt; &lt;y&gt;`, `voffset &lt;x&gt; &lt;y&gt;`: translational texture offset',['../md_engine.html#autotoc_md70',1,'']]],
+  ['_3a_20transparency_20modifiers_7',['`texalpha &lt;front&gt; &lt;back&gt;`, `valpha &lt;front&gt; &lt;back&gt;`: transparency modifiers',['../md_engine.html#autotoc_md67',1,'']]]
 ];
